@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tampilan Angka Realtime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #00796b;
+    }
+    .output {
+      font-size: 48px;
+      font-weight: bold;
+      color: #004d40;
+      margin-top: 30px;
+    }
+    table {
+        margin:auto;
+        margin-left:-10px;
+    }
+
+    table td{
+        padding-left:100px;
+    }
+    
+  </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <h1>Lapangan A</h1>
+            </td>
+            <td>
+                <h1>Lapangan B</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="output" id="outputValueA"><h1>0</h1></div>
+            </td>
+            <td>
+                <div class="output" id="outputValueB"><h1>0</h1></div>
+            </td>
+        </tr>
+    </table>
+
+  <script>
+    const outputA = document.getElementById('outputValueA');
+    const outputB = document.getElementById('outputValueB');
+
+    function updateValueA() {
+      const valueA = localStorage.getItem('realtimeValueA') || '0';
+      outputA.textContent = valueA;
+    }
+
+    function updateValueB() {
+      const valueB = localStorage.getItem('realtimeValueB') || '0';
+      outputB.textContent = valueB;
+    }
+
+    // Update setiap 500ms
+    setInterval(updateValueA, 500);
+    setInterval(updateValueB, 500);
+
+    // Inisialisasi saat load
+    updateValueA();
+    updateValueB();
+  </script>
+
+</body>
+</html>
