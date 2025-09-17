@@ -1,0 +1,43 @@
+body{
+    background-color:#3dc1d3;
+}
+body h1{
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+}
+.lap{
+    width:30em;
+    height: 30em;
+    margin-top:20px;
+    margin:5px;
+    background-color: aliceblue;
+}
+.titlebox{
+    width:100%;
+    height:50px;
+    background-color: #e66767;
+}
+
+.titlebox h2{
+    color:black;
+    align-items: center;
+}
+.partaik h1{
+    color:black;
+    font-size:20em;
+    font-weight: bolder;
+    text-wrap: balance;
+}
+.partaip h1{
+    color:black;
+    font-size:5em;
+    font-weight: bolder;
+    text-wrap: balance;
+}
+
+.labelbox{
+    width:100%;
+    height:50px;
+    background-color: #f3a683;
+}
